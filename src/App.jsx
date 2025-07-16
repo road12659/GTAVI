@@ -9,8 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 const App = () => {
   return (
     <main>
-      <NavBar></NavBar>
-      <Hero></Hero>
+      <NavBar />
+      
+      <Hero />
     </main>
   )
 }
