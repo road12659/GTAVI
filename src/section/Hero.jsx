@@ -11,6 +11,7 @@ function Hero() {
 
            <div className='play-img fade-out'>
             <img src="/images/play.png" alt="play" className='w-7 ml-1' />
+            <h1>Test</h1>
            </div>
         </div>
 
