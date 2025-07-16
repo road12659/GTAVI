@@ -21,6 +21,8 @@ function Hero() {
            <div className='fake-logo-wrapper'>
             <img src="/images/big-hero-text.svg" className='overlay-logo' />
            </div>
+
+           <ComingSoon></ComingSoon>
     </section>
   )
 }
