@@ -6,7 +6,29 @@ import {useMaskSettings} from '../../constants'
 import ComingSoon from './ComingSoon'
 
 function Hero() {
-  const {} = useMaskSettings();
+  const {initialMaskPos, initialMaskSize, maskPos, maskSize} = useMaskSettings();
+
+  useGSAP(() => {
+   gsap.set('.mask-wrapper', {
+      maskPosition: initialMaskPos,
+      maskSize: initialMaskSize,
+   });
+
+   gsap.set('.mask-logo', {marginTop: '-100vh', opacity: 0});
+
+   gsap.set('.entrance-message', {marginTop: '0vh'});
+
+   const tl = gsap.timeline({
+      scrollTrigger: {
+         trigger: '.hero-section',
+         start: 'top top',
+         scrub: 2.5,
+         end: '+=200%',
+         pint: true,
+      }
+   })
+  })
+
   return (
     <section className="hero-section">
 
