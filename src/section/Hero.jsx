@@ -1,11 +1,10 @@
+import ComingSoon from './ComingSoon'
 import React from 'react'
 import {useGSAP} from "gsap"
 import {useGSAP} from "@gsap/react"
-
 import {useMaskSettings} from '../../constants'
-import ComingSoon from './ComingSoon'
 
-function Hero() {
+const Hero = () => {
   const {initialMaskPos, initialMaskSize, maskPos, maskSize} = useMaskSettings();
 
   useGSAP(() => {
@@ -24,9 +23,12 @@ function Hero() {
          start: 'top top',
          scrub: 2.5,
          end: '+=200%',
-         pint: true,
+         pin: true,
       }
    })
+
+   tl.to('.fade-out', {opacity: 0, ease: 'power1.inOut'})
+   .to('scale-out', {scale: 1,})
   })
 
   return (
