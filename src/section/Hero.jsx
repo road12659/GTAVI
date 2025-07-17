@@ -1,6 +1,12 @@
 import React from 'react'
+import {useGSAP} from "gsap"
+import {useGSAP} from "@gsap/react"
+
+import {useMaskSettings} from '../../constants'
+import ComingSoon from './ComingSoon'
 
 function Hero() {
+  const {} = useMaskSettings();
   return (
     <section className="hero-section">
 
@@ -29,3 +35,4 @@ function Hero() {
 }
 
 export default Hero
+
