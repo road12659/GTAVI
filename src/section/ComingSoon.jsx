@@ -4,7 +4,7 @@ const ComingSoon = () => {
   return (
     <section className='entrance-message'>
         <div className='h-full col-center gap-10'>
-            <img src="/images/logo.webp" alt="logo" className='entrance-logo' />
+            <img src="/images/x-logo.webp" alt="logo" className='entrance-logo' />
         </div>
     </section>
   )
